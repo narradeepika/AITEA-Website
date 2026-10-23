@@ -1,0 +1,429 @@
+:root {
+    --ink: #111;
+    --muted: #666;
+    --paper: #fff;
+    --soft: #f3f4ef;
+    --line: #d8d8d8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Instrument Sans", Inter, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 48px;
+}
+
+section {
+    padding-block: 80px;
+    scroll-margin-top: 24px;
+}
+
+.soft {
+    background: var(--soft);
+}
+
+.dark {
+    background: var(--ink);
+    color: white;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.dark .muted {
+    color: #bbb;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    line-height: 1.16;
+    letter-spacing: -0.045em;
+    margin: 0 0 32px;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    max-width: 850px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 26px;
+    letter-spacing: -0.035em;
+    margin-bottom: 20px;
+}
+
+/* Text */
+p {
+    margin: 0 0 24px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.lead {
+    font-size: 21px;
+    line-height: 1.55;
+}
+
+.narrow {
+    max-width: 720px;
+}
+
+/* Header and Navigation */
+.site-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-block: 16px;
+}
+
+.logo {
+    display: block;
+    width: 156px;
+    height: 92px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px 24px;
+    margin-left: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+/* Hero Section */
+.hero-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 72px;
+    margin-top: 32px;
+}
+
+.hero-intro .lead {
+    max-width: 552px;
+}
+
+/* Country Flags */
+.flags {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.flag {
+    width: 64px;
+    height: 42px;
+    display: block;
+    position: relative;
+}
+
+.austria {
+    background: linear-gradient(
+        #ed2939 0 33.33%,
+        white 33.33% 66.66%,
+        #ed2939 66.66%
+    );
+}
+
+.india {
+    background: linear-gradient(
+        #ff9933 0 33.33%,
+        white 33.33% 66.66%,
+        #138808 66.66%
+    );
+}
+
+.chakra {
+    position: absolute;
+    left: 26px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid navy;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        navy 0 2deg,
+        transparent 2deg 15deg
+    );
+}
+
+/* Buttons */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 1px solid var(--ink);
+    font-size: 12px;
+    background: white;
+}
+
+.button.primary {
+    background: var(--ink);
+    color: white;
+}
+
+.button:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* Two-Column Layout */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+}
+
+.objective {
+    padding: 28px;
+    background: white;
+    min-height: 258px;
+}
+
+.objective .eyebrow {
+    margin-bottom: 20px;
+}
+
+/* Founders Section */
+.founders-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.founders-image {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* News Section */
+.news-card {
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: white;
+}
+
+/* Footer */
+footer {
+    padding-block: 40px;
+}
+
+footer small {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Skip Navigation Link */
+.skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    padding: 12px;
+    background: white;
+    transform: translateY(-150%);
+    z-index: 10;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* Tablet and Smaller Screens */
+@media (max-width: 1199px) {
+    .container {
+        padding-inline: 32px;
+    }
+
+    section {
+        padding-block: 64px;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .hero-intro {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .objectives-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .founders-grid,
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .founders-image {
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 809px) {
+    .container {
+        padding-inline: 24px;
+    }
+
+    section {
+        padding-block: 48px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    .objectives-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .objective {
+        min-height: 0;
+        padding: 28px;
+    }
+
+    .lead {
+        font-size: 21px;
+    }
+
+    .hero-intro {
+        gap: 32px;
+    }
+
+    .founders-image {
+        height: auto;
+    }
+
+    .actions {
+        gap: 12px;
+    }
+
+    .button {
+        padding-inline: 20px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .eyebrow {
+        letter-spacing: 0.05em;
+    }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
